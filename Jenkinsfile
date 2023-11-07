@@ -1,10 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage('build') {
-            steps {
-                git 'https://github.com/ariel-levy/pipeliening.git'
-            }
-        }
+    stage('GitHub Jenkins Ant Docker Build') {
+      steps {
+        git 'https://github.com/ariel-levy/pipeliening.git'
+        sh 'ant clean compile test package war'
+      }
     }
+  }
 }
