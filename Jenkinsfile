@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                git 'https://github.com/ariel-levy/pipeliening.git'
+                git branch: 'main', url: 'https://github.com/ariel-levy/pipeliening.git'
             }
         }
     }
